@@ -1,10 +1,4 @@
 # firststeps_php
-*________________________________________________________________________________________________________________________________________*
-*feito para uma hipotese que exista um vendedor com dois montantes:
-
-salário = valor total a ser recebido
-vendas = comissão de 15% a ser recebida em cima do montante total de vendas
-*________________________________________________________________________________________________________________________________________*
 
 <!DOCTYPE html>
 <html lang="pt-BR">
