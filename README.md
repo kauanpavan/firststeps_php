@@ -1,48 +1,35 @@
-# firststeps_php
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title> Formulário Salário </title>
-	</head>
-	<body>
-		<h3>Vendas + Salário Fixo</h3>
-		<form method = "POST" action = "#">
-			<label>Vulgo do Menor: </label>
-			<input type="text" required name = "txt_nome">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salário</title>
+</head>
+<body>
 
-            <BR><BR>
-	
-			<label>Pataco: </label>
-			<input type="text" required name = "txt_salario">
+<form method="POST">
+    <label for="txt_salario">Salário: </label>
+    <input type="text" required name="txt_salario" id="txt_salario"><br><br>
 
-            <BR><BR>
-			
-			<label>Vendas: </label>
-			<input type="text" required name = "txt_vendas">
+    <label for="txt_vendas">Vendas: </label>
+    <input type="text" required name="txt_vendas" id="txt_vendas"><br><br>
 
-            <BR><BR>
+    <input type="submit" name="btn_exibir" value="Pataco Final">
+</form>
 
-	<input type ="submit" name="btn_exibir" value="Pataco Final">  
-	</form>
-
-	<?php
-
-    if (count($_POST))
-
-    {
-	$nome = $_POST ["txt_nome"];
-	$salario = $_POST ["txt_salario"];
-	$vendas = $_POST ["txt_vendas"];
-	$salariof;
+<?php
+if (count($_POST)) {
+    $salario = $_POST["txt_salario"];
+    $vendas = $_POST["txt_vendas"];
+    $salariof;
     $porcentagem;
-    $porcentagem = $vendas / "100" * "15";   
-	$salariof = $salario + $porcentagem;
-   
-	echo "<br> Resultado: ".$salariof;
-    }
-	?>
+    $porcentagem = $vendas / 100 * 15;
+    $salariof = $salario + $porcentagem;
 
-	</body>
+    echo "<br> Resultado: " . $salariof;
+}
+?>
+
+</body>
 </html>
+
